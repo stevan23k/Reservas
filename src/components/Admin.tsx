@@ -13,7 +13,7 @@ export const Admin = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/login', {
+      const response = await axios.post('https://reservasbackend-production.up.railway.app/login', {
         username,
         password,
       });

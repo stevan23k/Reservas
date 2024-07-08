@@ -22,7 +22,7 @@ export const List = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/reservas");
+        const response = await fetch("https://reservasbackend-production.up.railway.app/api/reservas");
         if (!response.ok) {
           throw new Error("Error al obtener la lista de reservas");
         }
@@ -39,7 +39,7 @@ export const List = () => {
 
   const deleteReserva = async (id: number) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/reservas/${id}`, {
+      const response = await fetch(`https://reservasbackend-production.up.railway.app/api/reservas/${id}`, {
         method: "DELETE",
       });
       MySwal.fire({

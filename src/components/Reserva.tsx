@@ -31,7 +31,7 @@ export const Reserva = () => {
     setError(null);
     try {
       const response = await fetch(
-        `http://localhost:3000/api/reservas/nidentidad/${nidentidad}`
+        `https://reservasbackend-production.up.railway.app/api/reservas/nidentidad/${nidentidad}`
       );
       if (!response.ok) {
         throw new Error("Error al obtener la lista de reservas");
@@ -47,7 +47,7 @@ export const Reserva = () => {
   const deleteReserva = async (id: number) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/reservas/${id}`,
+        `https://reservasbackend-production.up.railway.app/api/reservas/${id}`,
         {
           method: "DELETE",
         }
