@@ -19,7 +19,7 @@ export const Form = () => {
   const enviarReserva = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const reserva = await axios.post("https://reservasbackend-production.up.railway.app/reserva", {
+      const reserva = await axios.post("${{ DATA_URL }}/reserva", {
         nombre,
         fecha,
         hora,
