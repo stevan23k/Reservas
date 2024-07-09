@@ -1,11 +1,14 @@
+import { useNavigate } from "react-router-dom";
+
+
 export const Inicio = () => {
 
-
+  const navigate = useNavigate();
   const irForm = () => {
-    window.location.href = "/form";
+    navigate("/form");
   };
-  const irAdmin = () => {
-    window.location.href = "/reservas";
+  const irReservas = () => {
+    navigate("/reservas");
   };
   
   return (
@@ -21,7 +24,7 @@ export const Inicio = () => {
             <button className="btn btn-primary mb-4 mt-5" onClick={irForm}>
               Hacer una reserva
             </button>
-            <button className="btn btn-primary" onClick={irAdmin}>
+            <button className="btn btn-primary" onClick={irReservas}>
               tengo reservas
             </button>
           </div>
