@@ -25,7 +25,9 @@ export const Reserva = () => {
   const [reservas, setResevas] = useState<Reserva[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
+  
+  {data}
+  
   const handleSearch = async () => {
     setLoading(true);
     setError(null);
