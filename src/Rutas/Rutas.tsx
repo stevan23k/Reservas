@@ -6,7 +6,9 @@ import PrivateRoute from "../Funciones/PrivateRoute";
 import { AuthProvider } from "../Funciones/AuthContext";
 import { List } from "../components/List.tsx";
 import { Reserva } from "../components/Reserva";
-function Rutas() {
+
+
+export const Rutas = () => {
   return (
     <AuthProvider>
       <Routes>
@@ -32,5 +34,3 @@ function Rutas() {
     </AuthProvider>
   );
 }
-
-export default Rutas;
