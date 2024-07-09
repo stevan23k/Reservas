@@ -4,9 +4,11 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
-const MySwal = withReactContent(Swal);
+
 
 export const Form = () => {
+  const MySwal = withReactContent(Swal);
+  
   const [nombre, setNombre] = useState("");
   const [fecha, setFecha] = useState("");
   const [hora, setHora] = useState("");
