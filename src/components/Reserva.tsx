@@ -31,7 +31,7 @@ export const Reserva = () => {
     setError(null);
     try {
       const response = await fetch(
-        `h${{ DATA_URL }}/api/reservas/nidentidad/${nidentidad}`
+        `${process.env.REACT_APP_DATA_URL}/api/reservas/nidentidad/${nidentidad}`
       );
       if (!response.ok) {
         throw new Error("Error al obtener la lista de reservas");
@@ -47,7 +47,7 @@ export const Reserva = () => {
   const deleteReserva = async (id: number) => {
     try {
       const response = await fetch(
-        `${{ DATA_URL }}/api/reservas/${id}`,
+        `${process.env.REACT_APP_DATA_URL}/api/reservas/${id}`,
         {
           method: "DELETE",
         }

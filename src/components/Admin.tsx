@@ -13,7 +13,7 @@ export const Admin = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post('$ {{ DATA_URL }}/login', { 
+      const response = await axios.post(`${process.env.REACT_APP_DATA_URL}/login`, { 
         username,
         password,
       });
